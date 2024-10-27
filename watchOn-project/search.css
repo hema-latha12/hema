@@ -1,0 +1,69 @@
+body {
+    background-color: #1E1E1E; /* Dark background */
+    color: white;
+    font-family: Arial, sans-serif;
+   
+    margin-top: 50px;
+} 
+
+h1 {
+    font-size: 36px;
+    color:white; /* Sky blue text color for title */
+} 
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+} 
+
+#movie-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #1E1E1E; /* Dark background for input box */
+    color: white;
+    
+    outline: none;
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 30px; /* Rounded corners */
+    position: relative;
+    z-index: 1;
+} 
+
+/* Glowing border effect around the entire box */
+.search-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgba(0, 207, 255, 1), rgba(255, 0, 0, 1), rgba(0, 207, 255, 1));
+    background-size: 100%;
+    z-index: -1;
+    animation: borderGlow 4s linear infinite;
+    box-sizing: border-box; /* Ensure padding/border don't affect size */
+    overflow: visible; /* Prevent cutting off */
+} 
+
+/* Keyframes for the glowing border animation */
+@keyframes borderGlow {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 200%;
+    }
+}
+.search1{
+    margin: 0;
+    padding: 10px;
+    width: 100px;
+    border-radius: 30%;
+    font-size: large;
+    background: linear-gradient(90deg, rgba(0, 207, 255, 1), rgba(255, 0, 0, 1), rgba(0, 207, 255, 1));
+    display: inline-block;
+    box-shadow: 3px 3px 5px #ba72ec;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watchOn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="background.css">
+</head>
+<body>
+    <header>
+        <h1>WATCH ON</h1>
+        <p class="para1">Find your favorite one & watch now</p>
+    </header>
+    <div class="search-container">
+        
+        <input list="movies" id="movie-search"  name="movie-search" class="search-movie" placeholder="search for movies..">
+        <datalist id="movies">
+            <option value="1992">
+            <option value="The School for Good and Evil">
+            </datalist>
+        <button class="search1" id="search1" onclick="searchMovie()">Search</button>
+        <p>Welcome to WatchOn, your ultimate destination for all  things movies! Whether you're in the mood for a heartwarning drama,an edge-of-your-seat thriller,or a laugh-out-loud comedy,we;ve got you covered..</p>
+        <p>Dive in now and let the movie magic begin</p>
+        
+        <div class="netflix">
+            <button onclick="window.location.href='https://www.netflix.com';">NETFLIX</button>&nbsp
+            <button onclick="window.location.href='https://www.primevideo.com';">AMAZON PRIME</button>&nbsp
+            <button onclick="window.location.href='https://www.hotstar.com';">DISNEY+HOTSTAR</button>&nbsp
+            <button type="submit"><i class="fa fa-search"></i></button>&nbsp
+            <div class="star">
+
+                <input type="radio" id="r1">
+                <label for="r1"></label>
+               
+                <input type="radio" id="r2">
+                <label for="r2"></label>
+               
+                <input type="radio"  id="r3">
+                <label for="r3"></label>
+               
+                <input type="radio" id="r4">
+                <label for="r4"></label>
+               
+                <input type="radio" id="r5">
+                <label for="r5"></label>
+               
+               </div>
+               <h2>Search List</h2>
+
+            
+            
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="movie-item">
+            <a href="1992.html">
+        <img src="images/1992.jpg" alt="1992" title="1992" class="nineteen-nineteen-two">
+            </a>
+        <a href="school for good and evil.html">
+        <img src="images/The_School_for_Good_and_Evil.jpeg" alt="Clickable Image" title="school-for-good-and-evil" class="school-for-good-and-evil">
+        </a>
+        </div>
+    </div>
+    
+    <script>
+        function searchMovie() {
+            var movieName = document.getElementById("movie-search").value.toLowerCase();
+            var movieFiles = {
+                "movie1": "1992.html",
+                "movie2": "school for good and evil.html"
+                // Add more movies as needed
+            };
+
+            if (movieFiles[movieName]) {
+                window.location.href = movieFiles[movieName];
+            } else {
+                alert("Movie not found!");
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
