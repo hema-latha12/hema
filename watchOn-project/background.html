@@ -6,6 +6,9 @@
     <title>watchOn</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="school for good and evil.css">
+    <link rel="stylesheet" href="1992.css">
+    
 </head>
 <body>
     <header>
@@ -68,6 +71,25 @@
     </div>
     
     <script>
+
+        function loadHTML(url, elementId) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById(elementId).innerHTML += xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        // Load multiple HTML files into one
+        loadHTML('school for good and evil.html', 'content');
+        loadHTML('1992.html', 'content');
+    
+
+
+        
         function searchMovie() {
             var movieName = document.getElementById("movie-search").value.toLowerCase();
             var movieFiles = {
